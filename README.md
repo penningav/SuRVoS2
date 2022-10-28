@@ -21,7 +21,7 @@ the coverage at least stays the same before you submit a pull request.
 ## License
 
 Distributed under the terms of the [Apache Software License 2.0] license,
-"SuRVoS2" is free and open source software
+"SuRVoS2" is free and open source software.
 
 ## Issues
 
