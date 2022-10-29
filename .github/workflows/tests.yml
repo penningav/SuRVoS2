@@ -25,6 +25,32 @@ jobs:
       run: |
         conda install pytest
         pytest .
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+          python-version: 3.8
+          auto-activate-base: true
+    - shell: pwsh
+      run: |
+        conda info
+        conda list
+    - name: Install dependencies
+      run: |
+        pip install --no-cache-dir -r req.txt
+        python ./survos2/improc/setup.py build_ext --inplace
+        pip install -e .
+    - name: Test
+      shell: pwsh
+      run: |
+        conda install pytest
+        pytest .
+
+
+
+
 
 
 
