@@ -17,7 +17,7 @@ jobs:
         conda list
     - name: Install dependencies
       run: |
-        pip install --no-cache-dir -r req.txt- name: Run pytest
+        pip install --no-cache-dir -r req.txt- name: Run pytes
     - name: Test
       shell: bash
       run: |
